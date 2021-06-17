@@ -12,13 +12,9 @@ Time to build the next viral (retro) game!
 
 ### Must-have features: phase 1
 
-- Have three buttons that the player can press to pick their weapon of choice (feel free to use emoji's for this)
-- Have a play button to have the computer pick one randomly
-- Announce the winner
-  - No alert box, add a message to your html
-  - Possible outcomes: draw (when both chose the same thing) or player won/lost
-
-> If you come across a topic that you don't know much about, feel free to research it (or ask well formatted questions to your peers or coach) - but look for info specifically to that topic. Spending half an hour re-checking how function work is fine, listening all day to "building a todo app with JS" is not.
+- [x] Have three buttons that the player can press to pick their weapon of choice (feel free to use emoji's for this)
+- [x] Have a play button to have the computer pick one randomly
+- [x] Announce the winner -[ ] No alert box, add a message to your html. What does this mean is ... -[x] Possible outcomes: draw (when both chose the same thing) or player won/lost
 
 [//]: # 'Coach note: below is a Github style spoiler'
 
