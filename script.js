@@ -9,7 +9,7 @@ let msg = document.getElementById('msg');
 let computerValues = ['rock', 'paper', 'scissors'];
 
 function getRandomInt(max) {
-  return Math.floor(Math.random() * max);
+  return Math.floor(Math.random() * max); //0, 0..., 0.9 * 3 -> 0, 1, 2
 }
 
 // console.log(getRandomInt(3));
@@ -21,55 +21,38 @@ function getRandomInt(max) {
 var btnChoice = document.getElementsByClassName('btnChoice');
 // console.log(btnChoice);
 
-let choices =[];
+var userChoice;
+
 for (let i = 0; i < btnChoice.length; i++) {
+
   btnChoice[i].addEventListener('click', function() {
-        // Do your button things.
-        console.log(btnChoice[i]);
-        console.log(btnChoice[i].innerHTML);
-
-        // TODO: Have a play button to have the computer pick one randomly
-    btnPlay.addEventListener('click', play);
-    // TODO: Possible outcomes: draw (when both chose the same thing) or player won/lost
-    // TODO: Announce the winner -No alert box, add a message to your html 
-function play() {
-  console.log('in');
-  console.log(btnChoice[i].innerHTML );
-  console.log(computerValues[getRandomInt(3)]);
-
-  // draw
-if(btnChoice[i].innerHTML == computerValues[getRandomInt(3)]) {
-  msg.innerHTML = 'draw';
-  console.log('in1');
-
-} else if (btnChoice[i].innerHTML == 'rock' && computerValues[getRandomInt(3)] == 'scissors') {
-  msg.innerHTML = `You win!`;
-  console.log('in2');
-
-} else if (btnChoice[i].innerHTML == 'rock' && computerValues[getRandomInt(3)] == 'paper') {
-  msg.innerHTML = `You lose!`;
-  console.log('in3');
-
-} else if (btnChoice[i].innerHTML == 'paper' && computerValues[getRandomInt(3)] == 'scissors') {
-  msg.innerHTML = `You lose!`;
-  console.log('in3');
-
-} else if (btnChoice[i].innerHTML == 'paper' && computerValues[getRandomInt(3)] == 'rock') {
-  msg.innerHTML = `You win!`;
-  console.log('in4');
-
-} else if (btnChoice[i].innerHTML == 'scissors' && computerValues[getRandomInt(3)] == 'rock') {
-  msg.innerHTML = `You lose!`;
-  console.log('in5');
-
-} else if (btnChoice[i].innerHTML == 'scissors' && computerValues[getRandomInt(3)] == 'paper') {
-  msg.innerHTML = `You win!`;
-  console.log('in6');
-
-}
-}
-    }); // close eventlistener
+    // Do your button things.
+  
+     userChoice= btnChoice[i].innerHTML;
+  }); // close eventlistener
 }   //close for loop
 
-
-
+ // TODO: Have a play button to have the computer pick one randomly
+ btnPlay.addEventListener('click', play);
+ // TODO: Possible outcomes: draw (when both chose the same thing) or player won/lost
+ // TODO: Announce the winner -No alert box, add a message to your html 
+ function play() {
+  console.log(userChoice);
+   console.log(computerChoice = computerValues[getRandomInt(3)]);  
+   // draw
+   if(userChoice === computerChoice) {
+   msg.innerHTML = 'draw';
+   } else if (userChoice == 'rock' && computerChoice == 'scissors') {
+   msg.innerHTML = `You win!`;
+   } else if (userChoice == 'rock' && computerChoice == 'paper') {
+   msg.innerHTML = `You lose!`;
+   } else if (userChoice == 'paper' && computerChoice == 'scissors') {
+   msg.innerHTML = `You lose!`;
+   } else if (userChoice == 'paper' && computerChoice == 'rock') {
+   msg.innerHTML = `You win!`;
+   } else if (userChoice == 'scissors' && computerChoice == 'rock') {
+   msg.innerHTML = `You lose!`;
+   } else if (userChoice == 'scissors' && computerChoice == 'paper') {
+   msg.innerHTML = `You win!`;
+   }
+ };
